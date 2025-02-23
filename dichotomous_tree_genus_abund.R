@@ -8,16 +8,13 @@
 
 site_funct_group_count <- readRDS("site_funct_group_count.RDS")
 
+# Loading libraries
+library(tidyverse)
+library(lme4)
+library(lmerTest)
+library(performance)
 
-# This will be close to 1. It will not be one because fungi without genera assinged were removed in
-# update analysis
-sum(distinct(genus_site_funct_long[genus_site_funct_long$sites == "TAM-U3-200819-A",
-                      c("genus", "sites", "abundance")])$abundance)
-
-sum(genus_site_funct_long$abundance[protu_df1$sites == "TAM-U3-200819-A"])#This is also 1
-
-
-# Dichotomous tree -> Genera abundance
+# Preparing data
 
 free_vs_symb_abund <-
   genus_site_funct_long %>% 

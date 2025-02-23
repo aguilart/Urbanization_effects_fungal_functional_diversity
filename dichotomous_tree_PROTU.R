@@ -7,6 +7,14 @@
 
 site_funct_group_count <- readRDS("site_funct_group_count.RDS")
 
+# Loading libraries
+library(tidyverse)
+library(lme4)
+library(lmerTest)
+library(performance)
+
+# Preparing data
+
 free_vs_symb_data <-
   site_funct_group_count %>% 
   filter(!is.na(functional_group))

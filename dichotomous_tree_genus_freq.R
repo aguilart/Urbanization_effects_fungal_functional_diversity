@@ -7,6 +7,14 @@
 
 site_funct_group_count <- readRDS("site_funct_group_count.RDS")
 
+# Loading libraries
+library(tidyverse)
+library(lme4)
+library(lmerTest)
+library(performance)
+
+# Preparing data
+
 free_vs_symb_freq <-
   genus_site_funct_long %>% 
   mutate(frequency = as.numeric(frequency)) %>% 
