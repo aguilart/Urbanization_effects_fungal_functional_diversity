@@ -4,6 +4,9 @@
 ##########  DATA ANALYSIS FUNCTIONAL TURNOVER (GENUS ABUNDANCE)   ####################
 ######################################################################################################
 
+# Loading OTU table in long format with the genus asociated and functional group
+
+site_funct_group_count <- readRDS("site_funct_group_count.RDS")
 
 
 # This will be close to 1. It will not be one because fungi without genera assinged were removed in

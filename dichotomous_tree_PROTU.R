@@ -3,6 +3,10 @@
 ##########  DATA ANALYSIS FUNCTIONAL TURNOVER (OTU-BASED)   #############################################
 ######################################################################################################
 
+# Loading OTU table in long format with the genus asociated and functional group
+
+site_funct_group_count <- readRDS("site_funct_group_count.RDS")
+
 free_vs_symb_data <-
   site_funct_group_count %>% 
   filter(!is.na(functional_group))
