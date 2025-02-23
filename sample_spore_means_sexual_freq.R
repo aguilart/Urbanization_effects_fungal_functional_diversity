@@ -7,7 +7,7 @@ library(lme4)
 library(lmerTest)
 library(performance)
 library(tidyverse)
-
+library(ggdist)
 
 get_table <- 
   function(x){ z <- summary(x)
