@@ -1,8 +1,18 @@
 
 ######################################################################################################
-##################################      DATA ANALYSIS    #############################################
+#####################  DATA ANALYSIS BIOTIC HOMOGENIZATION   #############################################
 ######################################################################################################
 
+# Loading OTU table in long format with the genus asociated and functional group
+
+site_funct_group_count <- readRDS("site_funct_group_count.RDS")
+
+# Loading libraries
+library(tidyverse)
+library(lme4)
+library(lmerTest)
+library(performance)
+library(metafor)
 
 functional_richness <-    
   left_join(
