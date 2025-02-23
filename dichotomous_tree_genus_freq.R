@@ -1,15 +1,8 @@
 
+######################################################################################################
+##########  DATA ANALYSIS FUNCTIONAL TURNOVER (GENUS FREQUENCY)   ####################
+######################################################################################################
 
-# Dichotomous tree -> Genera frequency
-
-# This is the version of the tree that uses the number of genera present in each sample
-# that is the sum of presence of genera present in the sample (frequency based)
-
-# This is the most conservative approach as the counts for functional groups will depend only
-# on the number of genera that are found, irrespective of how abundant those genera are, or
-# how many times that genera has been assinged to PRTUS
-
-#s <- grep("spore", names(genus_site_funct_long))
 
 free_vs_symb_freq <-
   genus_site_funct_long %>% 
