@@ -1,3 +1,8 @@
+
+######################################################################################################
+##########  DATA ANALYSIS ASEXUAL SPORE SIZE SHIFTS (ABUNDANCE WEIGHTED)   #############################################
+######################################################################################################
+
 library(lme4)
 library(lmerTest)
 library(performance)
@@ -18,6 +23,11 @@ get_table <-
   y
   
   }
+
+# Load data in long format: each genera present per site and ecosystem  and their
+# associated functional guild and spore size
+
+spore_function_long <- readRDS("spore_function_long.RDS")
 
 
 #### Analysis with abundance: asexual spores #####
@@ -276,10 +286,9 @@ write.table(tabla_asex_spores_abund,
             "results_asex_spores_abund.txt", sep =";",
             row.names = F)
 
-png("Figures/boxplots_asex_spores_mean_abund.png",
+pdf("Figures/boxplots_asex_spores_mean_abund.pdf",
     width = 11.015 ,
-    height = 17.03,
-    units = "in", res = 300)
+    height = 17.03)#,    units = "in", res = 300)
 cowplot::plot_grid(
 
 bind_rows(

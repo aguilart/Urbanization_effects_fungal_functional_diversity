@@ -1,8 +1,16 @@
+
+######################################################################################################
+##########  DATA ANALYSIS ASEXUAL SPORE SIZE SHIFTS (FREQUENCY)   ####################
+######################################################################################################
+
+
+
 library(lme4)
 library(lmerTest)
 library(performance)
 library(tidyverse)
 library(ggdist)
+library(ggsci)
 
 
 get_table <- 
@@ -18,6 +26,12 @@ get_table <-
   y
   
   }
+
+
+# Load data in long format: each genera present per site and ecosystem  and their
+# associated functional guild and spore size
+
+spore_function_long <- readRDS("spore_function_long.RDS")
 
 
 #### Analysis with frequencies: asexual spores ####
@@ -278,10 +292,9 @@ write.table(tabla_asex_spores_freq,
 
 
 ######################
-png("Figures/boxplots_asex_spores_mean_freq.png",
+pdf("Figures/boxplots_asex_spores_mean_freq.pdf",
     width = 11.015 ,
-    height = 17.03,
-    units = "in", res = 300)
+    height = 17.03)#,    units = "in", res = 300)
 cowplot::plot_grid(
 bind_rows(
   spore_function_long %>% 

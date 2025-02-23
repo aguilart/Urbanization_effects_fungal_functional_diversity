@@ -1,4 +1,8 @@
 
+######################################################################################################
+##########  DATA ANALYSIS SEXUAL SPORE SIZE SHIFTS (FREQUENCY)   ####################
+######################################################################################################
+
 library(lme4)
 library(lmerTest)
 library(performance)
@@ -18,6 +22,11 @@ get_table <-
   y
   
   }
+
+# Load data in long format: each genera present per site and ecosystem  and their
+# associated functional guild and spore size
+
+spore_function_long <- readRDS("spore_function_long.RDS")
 
 
 #### Analysis with frequencies: sexual spores ####
