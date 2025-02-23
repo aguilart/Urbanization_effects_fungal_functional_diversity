@@ -1,11 +1,7 @@
-# Dichotomous tree -> PROTU presence 
 
-# I wanted to stop using this one and instead getting a tree based on the abundance of genera
-# that turned out to be tricky from the glmer side and as MArch 2024 I got an error that stops me
-# from at least getting the dichotomous tree.
-
-# This version is based on the number of PROTU. It is an "as good as it gets" proxy for the abundance
-# of genera, as genera that have been assigned to many PROTU, will increase the counts to a guild
+######################################################################################################
+##########  DATA ANALYSIS FUNCTIONAL TURNOVER (OTU-BASED)   #############################################
+######################################################################################################
 
 free_vs_symb_data <-
   site_funct_group_count %>% 
